@@ -111,7 +111,7 @@
 		<snapshotRepository>
 			<id>tkt-mgmt-snapshot-hosted</id>
 			<name>tkt-mgmt-snapshot-hosted</name>
-			<url>http://192.168.0.70:8081/repository/simple-java-maven-app-snapshots/</url>
+			<url>http://192.168.0.70:8081/repository/tkt-mgmt-snapshot-hosted/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
