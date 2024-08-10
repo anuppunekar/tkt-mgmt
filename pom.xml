@@ -103,15 +103,15 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<distributionManagement>
-		<repository>
+		<!-- <repository>
 			<id>nexus</id>
-			<name>simple-java-maven-app-releases</name>
+			<name>tkt-mgmt-release-hosted</name>
 			<url>http://localhost:8081/repository/simple-java-maven-app-releases/</url>
-		</repository>
+		</repository> -->
 		<snapshotRepository>
-			<id>nexus</id>
-			<name>simple-java-maven-app-snapshots</name>
-			<url>http://192.168.1.25:8081/repository/simple-java-maven-app-snapshots/</url>
+			<id>tkt-mgmt-snapshot-hosted</id>
+			<name>tkt-mgmt-snapshot-hosted</name>
+			<url>http://192.168.0.70:8081/repository/simple-java-maven-app-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
