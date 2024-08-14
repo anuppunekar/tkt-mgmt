@@ -8,15 +8,23 @@ package com.mycompany.model;
 /**
  *
  * @author 
+ * 14-Aug-2024: added emailid
  */
 public class User {
 
     private Integer userid;
     private String username;
+    private String emailid;
 
     public User(Integer userid, String username){
         this.userid = userid;
         this.username = username;
+    }
+
+    public User(Integer userid, String username, String emailid){
+        this.userid = userid;
+        this.username = username;
+        this.emailid = emailid;
     }
 
     public Integer getUserid() {
@@ -34,5 +42,13 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+
+	public String getEmailid() {
+		return emailid;
+	}
+
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
 
 }

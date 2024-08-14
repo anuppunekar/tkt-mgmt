@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  *
  * @author 
+ * 14-Aug-2024: added emailid
  */
 
 @RestController
@@ -52,6 +53,7 @@ public class UserController {
         map.put("result", "Get User Implementation");
         map.put("userid", userService.getUser(id).getUserid());
         map.put("username", userService.getUser(id).getUsername());
+        map.put("emailid", userService.getUser(id).getEmailid());
         return map;
     }
 

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author 
+ * 14-Aug-2024: added emailid
  */
 @Service
 public class UserServiceImpl implements UserService {
@@ -27,9 +28,12 @@ public class UserServiceImpl implements UserService {
     
     public UserServiceImpl() {
         users = new LinkedList<>();
-        users.add(new User(100, "D"));
-        users.add(new User(101, "P"));
-        users.add(new User(102, "J"));
+        //users.add(new User(100, "D"));
+        //users.add(new User(101, "P"));
+        //users.add(new User(102, "J"));
+        users.add(new User(100, "D", "D@mycompany.com"));
+        users.add(new User(101, "P", "P@mycompany.com"));
+        users.add(new User(102, "J", "J@mycompany.com"));
     }
 
     @Override
