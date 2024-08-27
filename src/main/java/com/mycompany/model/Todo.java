@@ -6,6 +6,8 @@
 package com.mycompany.model;
 
 import java.util.Date;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -15,7 +17,11 @@ import java.util.Date;
 public class Todo {
 
     private int id;
+    
+    @NotNull
     private String user;
+    
+    @Size(min = 9, message = "Enter at least ten characters")
     private String desc;
     private Date targetDate;
     private boolean isDone;
