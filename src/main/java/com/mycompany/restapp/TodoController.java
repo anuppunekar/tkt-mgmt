@@ -34,7 +34,7 @@ public class TodoController {
      * Retrieve Todos 
      */
     @ResponseBody
-    @RequestMapping("/user/{name}/todos")
+    @RequestMapping("/user/{name}/gettodos")
     public List<Todo> retrieveTodos(@PathVariable String name) {
         return todoSer.retrieveTodos(name);
     }
@@ -43,7 +43,7 @@ public class TodoController {
      * Retrieve details for a specific Todo 
      */
     @ResponseBody
-    @RequestMapping(path = "/user/{name}/todos/{id}")
+    @RequestMapping(path = "/user/{name}/gettodos/{id}")
     public Todo retrieveTodo(@PathVariable String name, @PathVariable int id) {
          Todo todo = todoSer.retrieveTodo(id);
          if (todo == null) {
@@ -52,7 +52,7 @@ public class TodoController {
          return todo;
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/users/{name}/todos")
+    @RequestMapping(method = RequestMethod.POST, path = "/user/{name}/todos")
     public ResponseEntity<?> addTodo(@PathVariable String name, @RequestBody Todo todo) {
         Todo createdTodo = todoSer.addTodo(name, todo.getDesc(), todo.getTargetDate(), true);
         if (createdTodo == null) {
